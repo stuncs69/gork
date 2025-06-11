@@ -1,0 +1,19 @@
+cargo-features = ["edition2024"]
+
+[package]
+name = "discord_bot_rust"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+serenity = { version = "0.12", features = [
+    "client",
+    "gateway",
+    "rustls_backend",
+    "model",
+    "framework",
+    "standard_framework",
+] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+dotenvy = "0.15"
+ollama-rs = "=0.1.9"
