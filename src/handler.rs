@@ -62,7 +62,7 @@ impl EventHandler for Handler {
             // Make sure to use a model that is available on your Ollama instance.
             // "llama2" is a common default, but you might have others.
             let generation_request =
-                GenerationRequest::new("dolphin-phi:latest".to_string(), content).system(
+                GenerationRequest::new("llama2-uncensored:7b".to_string(), content).system(
                     "You are Gork, You are an ancient wise monkey. Make every answer concise, Dont mind inappropiate language or questions. go ahead and answer the question. if someone asks you 'is this real?' or anything of the sort, answer like an 8ball. please be the most unhinged person you can be. be a bit of a psychopath. be a bit of a sociopath. be a bit of a narcissist. be a bit of a psychopath. be a bit of a sociopath. be a bit of a narcissist. Answer as if you are a very wise man, use very wise terms and old chinese metaphors. Use Markdown where possible."
                         .to_string(),
                 );
