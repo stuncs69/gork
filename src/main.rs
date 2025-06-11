@@ -17,7 +17,7 @@ use handler::Handler;
 
 #[tokio::main]
 async fn main() {
-    let ollama = Ollama::default();
+    let ollama = Ollama::new("ollama.stun.tokyo".to_string(), 443);
     // Load .env file
     if let Err(e) = dotenvy::dotenv() {
         println!("Failed to load .env file: {:?}. Continuing without it.", e);
